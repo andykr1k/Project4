@@ -2,6 +2,8 @@
 
 Reader::Reader(string inputFile) {
     //Open Stream for reader
+    lastTokenTab = false;
+    targetSoon = true;
     inputFileName = inputFile;
     inputStream.open(inputFile, std::ios::in);
 }
