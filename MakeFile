@@ -1,0 +1,29 @@
+project4.x: main.o DepGraph.o MakeTree.o TreeNode.o GraphNode.o systemInterface.o Reader.o Token.o
+	g++ -std=c++17 main.o DepGraph.o MakeTree.o TreeNode.o GraphNode.o systemInterface.o Reader.o Token.o -o project4.x
+
+main.o: main.cpp DepGraph.hpp MakeTree.hpp TreeNode.hpp GraphNode.hpp systemInterface.hpp Reader.hpp Token.hpp
+	g++ -std=c++17 -c main.cpp -o main.o
+
+DepGraph.o: DepGraph.cpp DepGraph.hpp MakeTree.hpp TreeNode.hpp GraphNode.hpp systemInterface.hpp
+	g++ -std=c++17 -c DepGraph.cpp -o DepGraph.o
+
+MakeTree.o: MakeTree.cpp MakeTree.hpp TreeNode.hpp GraphNode.hpp systemInterface.hpp
+	g++ -std=c++17 -c MakeTree.cpp -o MakeTree.o
+
+TreeNode.o: TreeNode.cpp TreeNode.hpp GraphNode.hpp systemInterface.hpp
+	g++ -std=c++17 -c TreeNode.cpp -o TreeNode.o
+
+GraphNode.o: GraphNode.cpp GraphNode.hpp systemInterface.hpp
+	g++ -std=c++17 -c GraphNode.cpp -o GraphNode.o
+
+systemInterface.o: systemInterface.cpp
+	g++ -std=c++17 -c systemInterface.cpp -o systemInterface.o
+
+Reader.o: Reader.cpp Reader.hpp Token.hpp
+	g++ -std=c++17 -c Reader.cpp -o Reader.o
+
+Token.o: Token.cpp Token.hpp
+	g++ -std=c++17 -c Token.cpp -o Token.o
+
+clean:
+	rm -fr project4.x *.o
