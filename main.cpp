@@ -10,6 +10,8 @@ int main(int argc, const char *argv[]) {
         exit(1);
     }
 
+    
+
     //Read File, Tokenize and Make tree
     DepGraph *make = new DepGraph(argv[1]);
 
