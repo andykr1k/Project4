@@ -1,6 +1,6 @@
 
-project4.x: main.o DepGraph.o MakeTree.o TreeNode.o GraphNode.o systemInterface.o Reader.o Token.o
-	g++ -std=c++17 main.o DepGraph.o MakeTree.o TreeNode.o GraphNode.o systemInterface.o Reader.o Token.o -o project4.x
+make.x: main.o DepGraph.o MakeTree.o TreeNode.o GraphNode.o systemInterface.o Reader.o Token.o
+	g++ -std=c++17 main.o DepGraph.o MakeTree.o TreeNode.o GraphNode.o systemInterface.o Reader.o Token.o -o make.x
 
 main.o: main.cpp DepGraph.hpp MakeTree.hpp TreeNode.hpp GraphNode.hpp systemInterface.hpp Reader.hpp Token.hpp
 	g++ -std=c++17 -c main.cpp -o main.o
