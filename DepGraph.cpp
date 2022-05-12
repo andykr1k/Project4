@@ -134,10 +134,9 @@ void DepGraph::runHelper(GraphNode *node) {
         commandHasRun = true;
         //get timestamp
         timestamp(node->getName().c_str(), &targetTs);
-        //set timestamp
-        node->setTimestamp(targetTs);
     }
-
+    //set timestamp
+        node->setTimestamp(targetTs);
     //After all processes node is made
     node->wasMade(true);
 }
