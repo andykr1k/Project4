@@ -5,7 +5,7 @@ GraphNode::GraphNode( std::string name ){
     _command = "";
     cmnd = "";
     _timestamp = -1;
-    _listOfDependentNodes = {new vector<GraphNode *>};
+    _listOfDependentNodes = new vector<GraphNode *>;
     _onPath = false;
     _isATarget = false;
     _wasMade = false;
